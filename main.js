@@ -19,7 +19,15 @@ function getmenu(){
 function additem(){
     var htmldata;
     var item=document.getElementById("add_item").value;
-    menu_list_array.push(item);
+    if(item==="" || item===undefined)
+    {
+        alert("Please enter toppings");
+        console.log("Enter pizza name");
+    }
+    else{
+        menu_list_array.push(item);
+    }
+  
     menu_list_array.sort();
     htmldata="<'section class='cards'>"
     for(var i=0;i<menu_list_array.length;i++){
